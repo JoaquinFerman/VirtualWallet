@@ -11,8 +11,7 @@ The second step is to create files for the public and private keys used by the a
 
 ```bash
 export Jwt__Key="JwtKey"  
-export MongoDbUsername="username"  
-export MongoDbPassword="password"  
+export MongoDbAccess="mongodb+srv://your_acess"
 export BCryptSecret="secret"
 ```
 For the database from mongoDb one must first create a database named Users (former labeling error), with inside the collections Users and LoanRequests. The Users collection must have at least one user created for the app to work properly, because otherwise one could not create another users or manage the app in general. The user must have a Username, Password, and IsAdmin=True.
