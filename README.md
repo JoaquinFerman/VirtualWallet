@@ -7,7 +7,7 @@ The main uses of this app are to deposit, check balance, transfer, and manage lo
 
 To start the application one must first install the .NET SDK and Node.js
 
-The second step is to create files for the public and private keys used by the app (leave it with Program.cs), and declare enviroment variables for the Jwt key, the mongoDb credentials, and BCrypt secret. Example:
+The second step is to create files for the public and private keys used by the app (leave it with Program.cs) as private/public.pem, and declare enviroment variables for the Jwt key, the mongoDb credentials, and BCrypt secret. Example:
 
 ```bash
 export Jwt__Key="JwtKey"  
