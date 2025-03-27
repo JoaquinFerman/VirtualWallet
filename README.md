@@ -17,7 +17,7 @@ export BCryptSecret="secret"
 ```
 For the database from mongoDb one must first create a database named Users (former labeling error), with inside the collections Users and LoanRequests. The Users collection must have at least one user created for the app to work properly, because otherwise one could not create another users or manage the app in general. The user must have a Username, Password, and IsAdmin=True.
 
-Download .csproj dependencies, only the first time its run:
+Download dependencies from .csproj, only the first time its run:
 ```bash
 dotnet restore
 ```
@@ -37,3 +37,5 @@ Once the login is succesfull, there is the home page or main menu, where you can
 - Deposit: Input and enter an amount, which is directly added to the users account. (the purpose of this method is to have a fast way of getting money in the account, even though a thing like this doesnt make sense in a real wallet)
 - Transfer: Enter a valid account username and an amount, and if its all valid, the accion gets done.
 - Loans: Check ones active and defaulted loans, and request a custom loan. (for it to be active, an administrator must first approve it, and no more than one can be requested at a time)
+
+In the "Postman" directory there are instructions on how to make the requests in the forementioned tool, and the "Screenshots" one contains photos in the different screens of the app.
