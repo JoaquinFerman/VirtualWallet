@@ -38,4 +38,13 @@ Once the login is succesfull, there is the home page or main menu, where you can
 - Transfer: Enter a valid account username and an amount, and if its all valid, the accion gets done.
 - Loans: Check ones active and defaulted loans, and request a custom loan. (for it to be active, an administrator must first approve it, and no more than one can be requested at a time)
 
+# Additional Instructions
+
 In the "Postman" directory there are instructions on how to make the requests in the forementioned tool, and the "Screenshots" one contains photos in the different screens of the app.
+
+# Security Measures
+
+- Once logged in, the app provides a JWT (saved as a cookie if logged from the front), which is needed for all the following functions. It contains the username and the admin statement, the first to identify in the functions, and the second to authorize the admin functions.
+- The JWT firm is too encrypted using a private key. It is absolutely not necessary given the previous measure, but serves both as a good practice and as a way to provide a federated autentication if needed in the future.
+- The IDs are not secuential GUIDs.
+- The passwords are located in a mongoDb Atlas database, but hashed using the SHA384 logarithm.
