@@ -1,5 +1,5 @@
 ---
-This is a fullstack proyect, with the purpose of simulate a virtual wallet application.
+This is a fullstack proyect, with the purpose to simulate a virtual wallet application.
 
 The main uses of this app are to deposit, check balance, transfer, and manage loans. An administrator account could as well reject/approve any pending loan and manage accounts.
 
