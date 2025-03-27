@@ -12,17 +12,6 @@ namespace PrimeraWebAPI.Controllers
     public class LoginController : ControllerBase
     {
         private readonly TokenService _tokenService;
-
-        [HttpGet]
-        public IActionResult GetLoginPage()
-        {
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "login.html");
-            if (!System.IO.File.Exists(filePath)) {
-                return NotFound("El archivo login.html no se encontró.");
-            }
-            return PhysicalFile(filePath, "text/html");
-        }
-
         public LoginController(TokenService tokenService)
         {
             _tokenService = tokenService;
