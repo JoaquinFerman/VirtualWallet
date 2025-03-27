@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
     if (!token) {
-        alert("No se encontró el token, por favor inicie sesión.");
+        alert("Token not found, please re login.");
         window.location.href = "login.html";
         return;
     }
@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         if (response.ok) {            
             const result = await response.json();
-            document.getElementById("balance").textContent = `Tu balance es: $${result.balance}`;
+            document.getElementById("balance").textContent = `Your balance is: $${result.balance}`;
         } else {
             const errorData = await response.text();
-            console.error("Error al obtener el balance:", errorData);
-            document.getElementById("balance").textContent = "Hubo un error al obtener tu balance.";
+            console.error("There has been an error checking your balance:", errorData);
+            document.getElementById("balance").textContent = "There has been an error checking your balance.";
         }
     } catch (error) {
         console.error("Error al obtener el balance:", error);
-        document.getElementById("balance").textContent = "Hubo un error al obtener tu balance.";
+        document.getElementById("balance").textContent = "There has been an error checking your balance.";
     }
 
     document.getElementById("backBtn").addEventListener("click", function() {

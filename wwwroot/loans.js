@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
     if (!token) {
-        alert("No se encontró el token, por favor inicie sesión.");
+        alert("Token not found, please re login.");
         window.location.href = "login.html";
         return;
     }

@@ -4,7 +4,7 @@ document.getElementById('transferForm').addEventListener('submit', async functio
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
     if (!token) {
-        alert("No se encontró el token, por favor inicie sesión.");
+        alert("Token not found, please re login.");
         window.location.href = "login.html";
         return;
     }
@@ -25,7 +25,7 @@ document.getElementById('transferForm').addEventListener('submit', async functio
         });
         if (response.ok) {
             const result = await response.json();
-            alert("Transferencia exitosa.");
+            alert("Transfer successful.");
         } else {
             const errorData = await response.text();
             alert(`Error: ${errorData}`);
