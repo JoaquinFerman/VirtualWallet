@@ -9,7 +9,7 @@ public class MongoConnection {
         if (_client == null) {
             lock (_lock) {
                 if (_client == null) {
-                    string connectionUri = "mongodb+srv://joacoferman:" + Environment.GetEnvironmentVariable("MongoDbPassword") + "@jferman.agip7.mongodb.net/?retryWrites=true&w=majority&appName=JFerman";
+                    string connectionUri = Environment.GetEnvironmentVariable("MongoDbAccess");
                     var settings = MongoClientSettings.FromConnectionString(connectionUri);
                     settings.ServerApi = new ServerApi(ServerApiVersion.V1);
                     _client = new MongoClient(settings);
